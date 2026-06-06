@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyStore - Boutique en Ligne</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">MyStore</h1>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="#products">Produits</a></li>
+                        <li><a href="cart.html" class="cart-link">
+                                Panier <span class="cart-count">0</span>
+                            </a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Bienvenue chez MyStore</h2>
+                <p>Découvrez nos meilleurs produits à des prix compétitifs</p>
+            </div>
+        </section>
+
+        <section id="products" class="products-section">
+            <div class="container">
+                <h2>Produits Disponibles</h2>
+                <div class="products-grid" id="productsContainer">
+                    <!-- Les produits seront chargés ici par JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 MyStore. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
