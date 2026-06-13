@@ -75,3 +75,82 @@ function getCategoryName(category) {
     };
     return categoryNames[category] || category;
 }
+
+// Filtrer les produits
+function filterProducts() {
+    const searchTerm = searchInput.value.toLowerCase();
+    const selectedCategory = categoryFilter.value;
+
+    const filtered = products.filter(product => {
+        const matchesSearch = product.name.toLowerCase().includes(searchTerm) ||
+                             product.description.toLowerCase().includes(searchTerm);
+        const matchesCategory = selectedCategory === '' || product.category === selectedCategory;
+        return matchesSearch && matchesCategory;
+    });
+
+    displayProducts(filtered);
+}
+
+// Ouvrir la fenêtre modale de détails du produit
+function openProductDetail(productId) {
+    const product = products.find(p => p.id === productId);
+    if (!product) return;
+
+    currentProductId = productId;
+    document.getElementById('modalProductImage').src = product.image;
+    document.getElementById('modalProductName').textContent = product.name;
+    document.getElementById('modalProductDescription').textContent = product.fullDescription;
+    document.getElementById('modalProductPrice').textContent = `${product.price} DH`;
+    quantityInput.value = 1;
+
+    productModal.classList.add('show');
+}
+
+// Fermer la fenêtre modale
+function closeModal() {
+    productModal.classList.remove('show');
+    currentProductId = null;
+}
+
+// Ajouter au panier depuis la fenêtre modale
+function addToCart() {
+    if (!currentProductId) return;
+
+    const quantity = parseInt(quantityInput.value) || 1;
+    cart.addItem(currentProductId, quantity);
+
+    showNotification(`Produit ajouté au panier (${quantity} article(s))`);
+    closeModal();
+}
+
+// Ajout rapide au panier
+function quickAddToCart(productId) {
+    cart.addItem(productId, 1);
+    showNotification('Produit ajouté au panier');
+}
+
+// Afficher la notification
+function showNotification(message) {
+    // Créer la notification si elle n'existe pas
+    let notification = document.getElementById('notification');
+    if (!notification) {
+        notification = document.createElement('div');
+        notification.id = 'notification';
+        notification.className = 'notification';
+        document.body.appendChild(notification);
+    }
+
+    notification.textContent = message;
+    notification.classList.add('show');
+
+    setTimeout(() => {
+        notification.classList.remove('show');
+    }, 3000);
+}
+
+// Navigation au clavier
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeModal();
+    }
+});
