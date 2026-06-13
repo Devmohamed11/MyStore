@@ -1,32 +1,33 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyStore - Boutique en Ligne</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
+    <!-- Header -->
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <h1 class="logo">MyStore</h1>
+                <div class="logo-container"><a href="index.html"><img src="images/logo.png" alt="MyStore Logo" class="logo-img"></a></div>
                 <nav class="nav">
                     <ul>
                         <li><a href="index.html">Accueil</a></li>
                         <li><a href="#products">Produits</a></li>
                         <li><a href="cart.html" class="cart-link">
-                                Panier <span class="cart-count">0</span>
-                            </a></li>
+                            Panier <span class="cart-count">0</span>
+                        </a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
 
+    <!-- Main Content -->
     <main>
+        <!-- Hero Section -->
         <section class="hero">
             <div class="container">
                 <h2>Bienvenue chez MyStore</h2>
@@ -34,24 +35,51 @@
             </div>
         </section>
 
+        <!-- Products Section -->
         <section id="products" class="products-section">
             <div class="container">
                 <h2>Produits Disponibles</h2>
+                <div class="search-filter">
+                    <input type="text" id="searchInput" placeholder="Rechercher un produit...">
+                    <select id="categoryFilter">
+                        <option value="">Toutes les catégories</option>
+                        <option value="electronics">Électronique</option>
+                        <option value="clothing">Vêtements</option>
+                        <option value="books">Livres</option>
+                    </select>
+                </div>
                 <div class="products-grid" id="productsContainer">
-                    <!-- Les produits seront chargés ici par JavaScript -->
+                    <!-- Products will be loaded here by JavaScript -->
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <p>&copy; 2026 MyStore. Tous droits réservés.</p>
         </div>
     </footer>
 
+    <!-- Product Detail Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="product-detail">
+                <img id="modalProductImage" src="" alt="">
+                <div class="product-info">
+                    <h2 id="modalProductName"></h2>
+                    <p id="modalProductDescription"></p>
+                    <p class="price" id="modalProductPrice"></p>
+                    <input type="number" id="quantityInput" min="1" value="1">
+                    <button id="addToCartBtn" class="btn btn-primary">Ajouter au panier</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="js/data.js"></script>
     <script src="js/script.js"></script>
 </body>
-
 </html>
