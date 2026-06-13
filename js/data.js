@@ -5,7 +5,7 @@ const products = [
         name: "Casque Audio Sans Fil",
         category: "electronics",
         price: 299,
-        image: "assets/images/headphones.jpg",
+        image: "images/headphones.jpg",
         description: "Casque audio de haute qualité avec technologie Bluetooth 5.0",
         fullDescription: "Casque audio sans fil professionnel offrant une qualité sonore exceptionnelle avec technologie Bluetooth 5.0 avancée. Doté d'une autonomie de batterie jusqu'à 30 heures et d'un design confortable pour une utilisation prolongée.",
         specs: [
@@ -20,7 +20,7 @@ const products = [
         name: "Téléphone Intelligent 5G",
         category: "electronics",
         price: 1999,
-        image: "assets/images/smartphone.jpg",
+        image: "images/smartphone.jpg",
         description: "Téléphone intelligent moderne avec technologie 5G et caméra haute résolution",
         fullDescription: "Téléphone intelligent avancé combinant performance élevée et technologie 5G rapide. Équipé d'une caméra 108 mégapixels et d'un écran AMOLED 120Hz.",
         specs: [
@@ -35,7 +35,7 @@ const products = [
         name: "Montre Intelligente",
         category: "electronics",
         price: 599,
-        image: "assets/images/smartwatch.jpg",
+        image: "images/smartwatch.jpg",
         description: "Montre intelligente avec surveillance de santé avancée",
         fullDescription: "Montre intelligente qui suit votre activité physique toute la journée avec surveillance du rythme cardiaque et de la qualité du sommeil. Écran AMOLED et autonomie de batterie longue.",
         specs: [
@@ -50,7 +50,7 @@ const products = [
         name: "Chemise Décontractée",
         category: "clothing",
         price: 89,
-        image: "assets/images/shirt.jpg",
+        image: "images/shirt.jpg",
         description: "Chemise décontractée confortable en coton 100%",
         fullDescription: "Chemise décontractée confectionnée en coton naturel 100% avec un design moderne et confortable. Disponible en plusieurs couleurs et tailles.",
         specs: [
@@ -65,7 +65,7 @@ const products = [
         name: "Jean Classique",
         category: "clothing",
         price: 149,
-        image: "assets/images/jeans.jpg",
+        image: "images/jeans.jpg",
         description: "Jean classique de haute qualité",
         fullDescription: "Jean classique confectionné en denim de haute qualité. Doté d'un design intemporel et d'un confort optimal pour une utilisation quotidienne.",
         specs: [
@@ -80,7 +80,7 @@ const products = [
         name: "Chaussure de Sport",
         category: "clothing",
         price: 199,
-        image: "assets/images/shoes.jpg",
+        image: "images/shoes.jpg",
         description: "Chaussure de sport confortable pour la course et l'exercice",
         fullDescription: "Chaussure de sport spécialisée pour la course et l'exercice physique. Dotée de technologie d'absorption des chocs et d'une excellente ventilation.",
         specs: [
@@ -95,7 +95,7 @@ const products = [
         name: "Livre: JavaScript Éloquent",
         category: "books",
         price: 79,
-        image: "assets/images/js_book.jpg",
+        image: "images/js_book.jpg",
         description: "Livre complet pour apprendre la programmation en JavaScript",
         fullDescription: "Livre éducatif complet couvrant les bases et les techniques avancées de la programmation en JavaScript. Inclut des exemples pratiques et des exercices applicables.",
         specs: [
@@ -110,7 +110,7 @@ const products = [
         name: "Livre: Design Web",
         category: "books",
         price: 99,
-        image: "assets/images/design_book.jpg",
+        image: "images/design_book.jpg",
         description: "Guide pratique pour concevoir des sites web professionnels",
         fullDescription: "Livre pratique expliquant les bases et techniques modernes de conception de sites web. Inclut des exemples de projets réels.",
         specs: [
@@ -125,7 +125,7 @@ const products = [
         name: "Livre: Marketing Numérique",
         category: "books",
         price: 119,
-        image: "assets/images/marketing_book.jpg",
+        image: "images/marketing_book.jpg",
         description: "Stratégies modernes du marketing numérique",
         fullDescription: "Livre complet couvrant tous les aspects du marketing numérique, des réseaux sociaux à l'optimisation des moteurs de recherche.",
         specs: [
