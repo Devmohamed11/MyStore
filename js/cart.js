@@ -105,7 +105,7 @@ function updateCartSummary() {
 // Configurer le paiement
 function setupCheckout() {
     checkoutBtn.addEventListener('click', () => {
-        const total = cart.getTotalPrice(); // بدون tax
+        const total = cart.getTotalPrice();
         alert(`Merci! Total de la commande: ${total.toFixed(2)} DH\n\nVous serez redirigé vers la page de paiement bientôt.`);
     });
 }
