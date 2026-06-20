@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panier - MyStore</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/icon.png">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-container"><a href="index.html"><img src="images/logo.png" alt="MyStore Logo" class="logo-img"></a></div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="index.html#products">Produits</a></li>
+                        <li><a href="cart.html" class="cart-link">
+                            Panier <span class="cart-count">0</span>
+                        </a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="cart-section">
+            <div class="container">
+                <h2>Votre Panier</h2>
+                
+                <div class="cart-content">
+                    <div class="cart-items">
+                        <div id="cartItemsContainer">
+                            <!-- Cart items will be loaded here by JavaScript -->
+                        </div>
+                        <div id="emptyCartMessage" class="empty-cart">
+                            <p>Votre panier est vide</p>
+                            <a href="index.html" class="btn btn-primary">Continuer vos achats</a>
+                        </div>
+                    </div>
+
+                    <div class="cart-summary">
+                        <h3>Résumé de la commande</h3>
+                        <div class="summary-item">
+                            <span>Nombre d'articles:</span>
+                            <span id="totalItems">0</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Sous-total:</span>
+                            <span id="subtotal">0 DH</span>
+                        </div>
+                        <div class="summary-item total">
+                            <span>Total:</span>
+                            <span id="total">0 DH</span>
+                        </div>
+                        <button id="checkoutBtn" class="btn btn-success">Procéder au paiement</button>
+                        <a href="index.html" class="btn btn-secondary">Continuer les achats</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 MyStore. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>
