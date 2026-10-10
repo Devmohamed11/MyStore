@@ -846,7 +846,7 @@ body {
 @media (max-width: 768px) {
     html, body { max-width: 100%; overflow-x: hidden; }
     .container { width: 100%; padding-left: 16px; padding-right: 16px; }
-    .header-content { min-height: 72px; gap: 12px; }
+    .header-content { min-height: 72px; gap: 12px; flex-direction: row; justify-content: space-between; align-items: center; }
     .logo-img { height: 64px; max-width: min(190px, 58vw); object-fit: contain; }
     .menu-toggle { display: flex; flex: 0 0 44px; margin-left: auto; }
     .nav { position: absolute; top: 100%; left: 16px; right: 16px; display: block; visibility: hidden; opacity: 0; transform: translateY(-8px); pointer-events: none; background: #2c3e50; border-top: 1px solid rgba(255,255,255,.12); border-radius: 0 0 8px 8px; box-shadow: 0 8px 18px rgba(0,0,0,.18); transition: opacity .2s ease, transform .2s ease, visibility .2s ease; }
@@ -903,3 +903,4 @@ body {
     .cart-item-actions { flex-direction: column; align-items: stretch; }
     .quantity-controls { justify-content: center; }
 }
+
